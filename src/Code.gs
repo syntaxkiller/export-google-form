@@ -20,7 +20,9 @@ function main() {
     "count": items.length
   };
   
-  Logger.log(JSON.stringify(result));
+  Logger.log(JSON.stringify(result));  
+  var Strung = JSON.stringify(result);
+  DocumentApp.create('export-google-form').getBody().appendParagraph(Strung);
 }
 
 /**
